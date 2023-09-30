@@ -1,0 +1,459 @@
+*{
+    font-family: 'Expo-2', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s linear;
+}
+
+@mixin button(){
+    height: 4rem;
+    width: 14rem;
+    background: transparent;
+    border: .2rem solid pink;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover{
+        background: pink;
+        color: #fff;
+    }
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+   width: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem 3rem;
+   position: fixed;
+   z-index: 1000;
+
+   nav{
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            li{
+                margin: 1rem 1.5rem;
+                
+                a{
+                    font-size: 2rem;
+                    text-decoration: none;
+                    // color: #fff;
+                    padding: 1rem;
+
+                    &:hover{
+                        background: pink;
+                        text-decoration: none;
+                    }
+                 
+                }
+            }
+        }
+    }
+
+    .fa-bars{
+        font-size: 4rem;
+        color: pink;
+        cursor: pointer;
+        margin: 0 2rem;
+        z-index: 20;
+        display: none;
+    }
+
+    .logo{
+        margin: 0 1.5rem;
+
+        a{
+            text-decoration: none;
+
+            h1{
+                font-size: 3rem;
+                color: #fff;
+
+                span{
+                    color: pink;
+                }
+            }
+        }
+    }
+}
+
+.fa-times{
+    transform: rotateZ(180deg);
+}
+
+.active{
+    background: #333;
+    box-shadow: 0 .1rem .3rem;
+}
+
+#home{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 5rem;
+    text-align: center;
+    position: relative;
+    background: mediumturquoise;
+    h1{
+        font-size: 9rem;
+        margin: 0 .5rem;
+        color: #fff;
+    }
+
+    h3{
+        font-size: 7rem;
+        color: pink;
+        margin: 1rem 0;
+    }
+    button{
+        margin: 2rem 0;
+        font-size: 2rem;
+        @include button();
+    }
+}
+
+.icons{
+    position: absolute;
+}
+
+#feature{
+    height: auto;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background: pink;
+    
+    h1{
+        color: red;
+        font-size: 2rem;
+        margin:  1rem 2rem;
+    }
+
+    .card-container{
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 2rem 0; 
+
+        .card{
+            width: 30rem;
+            height: auto;
+            margin: 2rem;
+            background: #fff;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .content{
+                height: 90%;
+                width: 100%;
+                text-align: center;
+
+                h1{
+                    color: pink;
+                    font-size: 2.5rem;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    padding: .5rem;
+                }
+
+                button{
+                    @include button();
+                    margin: 1rem 0;
+                }
+            }
+            &:hover{
+                transform: translateY(-3rem);
+            }
+        }
+    }
+}
+
+#about{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .image{
+        margin: 5rem 15rem;
+
+        img{
+            width: 30rem;
+        }
+    }
+    .content{
+        width: 90vw;
+
+        h1{
+            font-size: 4rem;
+            margin: 3rem 0;
+            color: pink;
+        }
+        p{
+            font-size: 2rem;
+            padding-right: 6rem;
+        }
+        .buttons{
+            padding-right: 2rem;
+
+            button{
+                @include button();
+                margin: 2rem 2rem 2rem 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    html{
+        font-size: 50%;
+    }
+   
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: 40%;
+    }
+
+    #about{
+        flex-flow: column;
+        align-items: center;
+
+        .image{
+            img{
+                width: 70vw;
+            }
+        }
+        .content{
+            text-align: center;
+            p{
+                padding: 2rem;
+            }
+            .buttons{
+                padding: 0;
+            }
+        }
+    }
+   
+}
+
+#gallery{
+    display: grid;
+    place-items: center;
+    height: auto;
+    width: 100vw;
+    background: #f7f7f7;
+
+    h1{
+        font-size: 4rem;
+        color: pink;
+        margin: 2rem 0;
+    }
+
+    .image-container{
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .image{
+            width: 30rem;
+            height: 25rem;
+            margin-top: 2rem;
+            // margin: 2rem;
+            position: relative;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .info{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                background: rgba(0,0,0,0.7);
+    
+                button{
+                    @include button();
+                }   
+            }
+            &:hover .info{
+                bottom: 0%;
+            }  
+            
+        }
+       
+
+        
+    }
+}
+
+#contact{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    form{
+        display: flex;
+        flex-flow: column;
+        h1{
+            color: pink;
+            font-size: 4rem;
+        }
+        input{
+            height: 4rem;
+            background: transparent;
+            margin: 2rem 0;
+            padding: 0 1rem;
+            border: .2rem solid pink;
+            outline: none;
+            color: #fff;
+            font-weight: bold;
+            width: 40vw;
+
+            &::placeholder{
+                color: #ccc;
+            }
+            &:focus{
+                background: pink;
+            }
+        }
+        input[type="submit"]{
+            @include button();
+            background: pink;
+            color: #fff;
+
+            &:hover{
+                color: black;
+                background: transparent;
+            }
+        }
+        textarea{
+            resize: none;
+            background: transparent;
+            outline:  none;
+            padding: 1rem;
+            color: #fff;
+            border: .2rem solid pink;
+            font-weight: bold;
+        }
+    }
+
+    .image{
+        img{
+            height: 80vh;
+            width: 30vh;
+            margin-top: 16rem;
+        }
+    }
+    #contact{
+        .image{
+            display: none;
+        }
+        form{
+            input{
+                width: 90vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 620px){
+    header{
+        .fa-bars{
+            display: block;
+        }
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: -200%;
+            height: 100vh;
+            width: 80vw;
+            background: #fff;
+            box-shadow: 30rem 0 0 rgba(0,0,0,.5);
+
+            ul{
+                height: 100%;
+                flex-flow: column;
+                justify-content: center;
+
+                li{
+                    margin: 2rem 0;
+
+                    a{
+                        margin: 0;
+                        font-size: 4rem;
+                        color: pink;
+
+                        &:hover{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-toggle{
+        left:0;
+    }
+   
+    #home{
+        h1{
+            font-size: 6.5rem;
+        }
+        h3{
+            font-size: 4rem;
+        }
+
+        .icons{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+

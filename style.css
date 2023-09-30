@@ -1,0 +1,564 @@
+* {
+  font-family: 'Expo-2', sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 3rem;
+  position: fixed;
+  z-index: 1000;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul li {
+  margin: 1rem 1.5rem;
+}
+
+header nav ul li a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+header nav ul li a:hover {
+  background: pink;
+  text-decoration: none;
+}
+
+header .fa-bars {
+  font-size: 4rem;
+  color: pink;
+  cursor: pointer;
+  margin: 0 2rem;
+  z-index: 20;
+  display: none;
+}
+
+header .logo {
+  margin: 0 1.5rem;
+}
+
+header .logo a {
+  text-decoration: none;
+}
+
+header .logo a h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+header .logo a h1 span {
+  color: pink;
+}
+
+.fa-times {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.active {
+  background: #333;
+  -webkit-box-shadow: 0 .1rem .3rem;
+          box-shadow: 0 .1rem .3rem;
+}
+
+#home {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding-top: 5rem;
+  text-align: center;
+  position: relative;
+  background: mediumturquoise;
+}
+
+#home h1 {
+  font-size: 9rem;
+  margin: 0 .5rem;
+  color: #fff;
+}
+
+#home h3 {
+  font-size: 7rem;
+  color: pink;
+  margin: 1rem 0;
+}
+
+#home button {
+  margin: 2rem 0;
+  font-size: 2rem;
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: .2rem solid pink;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#home button:hover {
+  background: pink;
+  color: #fff;
+}
+
+.icons {
+  position: absolute;
+}
+
+#feature {
+  height: auto;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: pink;
+}
+
+#feature h1 {
+  color: red;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+}
+
+#feature .card-container {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+#feature .card-container .card {
+  width: 30rem;
+  height: auto;
+  margin: 2rem;
+  background: #fff;
+}
+
+#feature .card-container .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#feature .card-container .card .content {
+  height: 90%;
+  width: 100%;
+  text-align: center;
+}
+
+#feature .card-container .card .content h1 {
+  color: pink;
+  font-size: 2.5rem;
+}
+
+#feature .card-container .card .content p {
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+#feature .card-container .card .content button {
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: .2rem solid pink;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+#feature .card-container .card .content button:hover {
+  background: pink;
+  color: #fff;
+}
+
+#feature .card-container .card:hover {
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+}
+
+#about {
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#about .image {
+  margin: 5rem 15rem;
+}
+
+#about .image img {
+  width: 30rem;
+}
+
+#about .content {
+  width: 90vw;
+}
+
+#about .content h1 {
+  font-size: 4rem;
+  margin: 3rem 0;
+  color: pink;
+}
+
+#about .content p {
+  font-size: 2rem;
+  padding-right: 6rem;
+}
+
+#about .content .buttons {
+  padding-right: 2rem;
+}
+
+#about .content .buttons button {
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: .2rem solid pink;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 2rem 2rem 2rem 0;
+}
+
+#about .content .buttons button:hover {
+  background: pink;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about .image img {
+    width: 70vw;
+  }
+  #about .content {
+    text-align: center;
+  }
+  #about .content p {
+    padding: 2rem;
+  }
+  #about .content .buttons {
+    padding: 0;
+  }
+}
+
+#gallery {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: auto;
+  width: 100vw;
+  background: #f7f7f7;
+}
+
+#gallery h1 {
+  font-size: 4rem;
+  color: pink;
+  margin: 2rem 0;
+}
+
+#gallery .image-container {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#gallery .image-container .image {
+  width: 30rem;
+  height: 25rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#gallery .image-container .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#gallery .image-container .image .info {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#gallery .image-container .image .info button {
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: .2rem solid pink;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#gallery .image-container .image .info button:hover {
+  background: pink;
+  color: #fff;
+}
+
+#gallery .image-container .image:hover .info {
+  bottom: 0%;
+}
+
+#contact {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#contact form h1 {
+  color: pink;
+  font-size: 4rem;
+}
+
+#contact form input {
+  height: 4rem;
+  background: transparent;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  border: .2rem solid pink;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  width: 40vw;
+}
+
+#contact form input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+#contact form input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact form input::-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact form input::placeholder {
+  color: #ccc;
+}
+
+#contact form input:focus {
+  background: pink;
+}
+
+#contact form input[type="submit"] {
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: .2rem solid pink;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  background: pink;
+  color: #fff;
+}
+
+#contact form input[type="submit"]:hover {
+  background: pink;
+  color: #fff;
+}
+
+#contact form input[type="submit"]:hover {
+  color: black;
+  background: transparent;
+}
+
+#contact form textarea {
+  resize: none;
+  background: transparent;
+  outline: none;
+  padding: 1rem;
+  color: #fff;
+  border: .2rem solid pink;
+  font-weight: bold;
+}
+
+#contact .image img {
+  height: 80vh;
+  width: 30vh;
+  margin-top: 16rem;
+}
+
+#contact #contact .image {
+  display: none;
+}
+
+#contact #contact form input {
+  width: 90vw;
+}
+
+@media (max-width: 620px) {
+  header .fa-bars {
+    display: block;
+  }
+  header nav {
+    position: fixed;
+    top: 0;
+    left: -200%;
+    height: 100vh;
+    width: 80vw;
+    background: #fff;
+    -webkit-box-shadow: 30rem 0 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 30rem 0 0 rgba(0, 0, 0, 0.5);
+  }
+  header nav ul {
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header nav ul li {
+    margin: 2rem 0;
+  }
+  header nav ul li a {
+    margin: 0;
+    font-size: 4rem;
+    color: pink;
+  }
+  header nav ul li a:hover {
+    color: #fff;
+  }
+  .nav-toggle {
+    left: 0;
+  }
+  #home h1 {
+    font-size: 6.5rem;
+  }
+  #home h3 {
+    font-size: 4rem;
+  }
+  #home .icons {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
